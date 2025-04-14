@@ -1,0 +1,20 @@
+<!-- cards/templates/cards/card_list.html -->
+
+{% extends "cards/base.html" %}
+
+{% block content %}
+    <h2>
+        Все карточки
+    </h2>
+    <a href="{% url 'card-create' %}" role="button" style="color:black;text-decoration:underline;">
+        Создать новую
+    </a>
+    {% for card in card_list %}
+        {% ifchanged %}
+            <h3> Стопка {{ card.box }}</h3>
+        {% endifchanged %}
+        {% include "cards/card.html" %}
+    {% endfor %}
+{% endblock content %}
+
+<!-- ... -->

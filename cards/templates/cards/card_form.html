@@ -1,0 +1,19 @@
+<!-- cards/templates/cards/card_form.html -->
+
+{% extends "cards/base.html" %}
+
+{% block content %}
+    {% if card %}
+        <h2>Изменить карточку</h2>
+    {% else %}
+        <h2>Создать новую</h2>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Сохранить">
+    </form>
+    <a href="{% url 'card-list' %}">
+        Отмена
+    </a>
+{% endblock %}

@@ -1,0 +1,7 @@
+<!-- cards/templates/box_links.html -->
+
+{% for box in boxes %}
+    <a href="{% url 'box' box_num=box.number %}">
+        Стопка {{ box.number }} <mark>{{ box.card_count }}</mark>
+    </a>
+{% endfor %}

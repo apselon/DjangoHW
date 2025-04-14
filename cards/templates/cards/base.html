@@ -1,0 +1,60 @@
+<!-- cards/templates/cards/base.html -->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Карточки Anki</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+
+<!-- <style> -->
+<!--     /* Custom CSS */ -->
+
+<!--     article { -->
+<!--         background-color: var(--marked); -->
+<!--         border: 1px solid var(--border); -->
+<!--         border-radius: 5px; -->
+<!--         padding: 1em; -->
+<!--         margin: 1em 0; -->
+<!--     } -->
+
+<!--     h2 { -->
+<!--         text-align: center; -->
+<!--     } -->
+
+<!--     h2, h4 { -->
+<!--         margin-top: 0; -->
+<!--     } -->
+
+<!--     hr { -->
+<!--         background: var(--accent); -->
+<!--         border-color: var(--accent); -->
+<!--     } -->
+
+<!--     button, -->
+<!--     a[role="button"] { -->
+<!--         color: white; -->
+<!--         text-decoration: none; -->
+<!--     } -->
+
+<!--     input, select, textarea { -->
+<!--         width: 100%; -->
+<!--     } -->
+<!-- </style> -->
+
+<!-- ... -->
+
+<body>
+    <header>
+        <h1>Карточки Anki</h1>
+        {% include "cards/navigation.html" %}
+    </header>
+    <main>
+        {% block content %}
+            <h2>Приложение для запоминания слов!</h2>
+        {% endblock content %}
+    </main>
+</body>
+
+</html>
